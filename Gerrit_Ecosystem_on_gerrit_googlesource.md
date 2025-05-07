@@ -29,7 +29,7 @@ This mind map provides a high-level categorization of the projects.
 
 ```mermaid
 ---
-title: "CHANGE_ME_DADDY"
+title: "Gerrit Ecosystem on gerrit.googlesource.com"
 author: "Cong Le"
 version: "1.0"
 license(s): "MIT, CC BY 4.0"
@@ -161,7 +161,7 @@ config:
     'fontFamily': 'Monaco',
     'themeVariables': {
       'primaryColor': '#F5E3',
-      'primaryTextColor': '#145A32',
+      'primaryTextColor': '#F8B229',
       'lineColor': '#F8B229',
       'primaryBorderColor': '#27AE60',
       'secondaryColor': '#EBDEF0',
@@ -239,7 +239,7 @@ config:
     'fontFamily': 'Monaco',
     'themeVariables': {
       'primaryColor': '#F5E3',
-      'primaryTextColor': '#145A32',
+      'primaryTextColor': '#F8B229',
       'lineColor': '#F8B229',
       'primaryBorderColor': '#27AE60',
       'secondaryColor': '#EBDEF0',
@@ -253,6 +253,7 @@ flowchart TD
     subgraph Modules
     direction LR
         M_Root["Modules"]
+        style M_Root fill:#F719,stroke:#333,stroke-width:2px
 
         Cache["Caching Layer"] --> M_Chronicle["modules/cache-chroniclemap<br/><i>ChronicleMap cache</i>"]
          click M_Chronicle href "https://gerrit.googlesource.com/modules/cache-chroniclemap" "modules/cache-chroniclemap"
@@ -289,7 +290,6 @@ flowchart TD
         M_Root --> Accounts
         M_Root --> Hosting
     end
-    style M_Root fill:#FD70,stroke:#333,stroke-width:2px
 
 ```
 
@@ -300,6 +300,34 @@ flowchart TD
 Plugins extend Gerrit's functionality. This shows the major categories. Detailed plugins will follow.
 
 ```mermaid
+---
+title: "Gerrit Plugin Categories Overview"
+author: "Cong Le"
+version: "1.0"
+license(s): "MIT, CC BY 4.0"
+copyright: "Copyright (c) 2025 Cong Le. All Rights Reserved."
+config:
+---
+%%{
+  init: {
+    'theme': 'base',
+    'fontFamily': 'Monaco',
+    'mindmap': {
+      'padding': 20,
+      'levelColors': ['#87CEEB', '#98FB98', '#F8B229', '#FFB6C1']
+    },
+    'themeVariables': {
+      'primaryColor': '#D5F5E3',
+      'primaryTextColor': '#145A32',
+      'primaryBorderColor': '#27AE60',
+      'secondaryColor': '#EBDEF0',
+      'secondaryTextColor': '#6C3483',
+      'secondaryBorderColor': '#A569BD',
+      'fontSize': '20px'
+    }
+  }
+}%%
+%%%%%%%% Mermaid version v11.4.1-b.14
 mindmap
 root((Gerrit Plugins))
     Authentication_and_Authorization("Authentication &<br/> Authorization")
@@ -355,7 +383,7 @@ config:
     'fontFamily': 'Monaco',
     'themeVariables': {
       'primaryColor': '#F5E3',
-      'primaryTextColor': '#145A32',
+      'primaryTextColor': '#F8B229',
       'lineColor': '#F8B229',
       'primaryBorderColor': '#27AE60',
       'secondaryColor': '#EBDEF0',
@@ -368,6 +396,7 @@ config:
 flowchart TD
     subgraph AuthPlugins["Authentication &<br/> Authorization Plugins"]
         P_AuthRoot["Auth Plugins"]
+        style P_AuthRoot fill:#F719,stroke:#333,stroke-width:2px
 
         P_AuthRoot --> P_htpasswd["plugins/auth-htpasswd<br/><i>Apache htpasswd auth</i>"]
          click P_htpasswd href "https://gerrit.googlesource.com/plugins/auth-htpasswd" "plugins/auth-htpasswd"
@@ -410,7 +439,7 @@ config:
     'fontFamily': 'Monaco',
     'themeVariables': {
       'primaryColor': '#F5E3',
-      'primaryTextColor': '#145A32',
+      'primaryTextColor': '#F8B229',
       'lineColor': '#F8B229',
       'primaryBorderColor': '#27AE60',
       'secondaryColor': '#EBDEF0',
@@ -424,6 +453,7 @@ flowchart TD
     subgraph CICDPlugins["CI/CD & External System Integration Plugins"]
     direction LR
         P_CICDRoot["CI/CD &<br/> Integration"]
+        style P_CICDRoot fill:#F719,stroke:#333,stroke-width:2px
 
         P_CICDRoot --> P_Checks["plugins/checks<br/><i>CI System Integration API/UI</i>"]
          click P_Checks href "https://gerrit.googlesource.com/plugins/checks" "plugins/checks"
@@ -505,7 +535,7 @@ config:
     'fontFamily': 'Monaco',
     'themeVariables': {
       'primaryColor': '#F5E3',
-      'primaryTextColor': '#145A32',
+      'primaryTextColor': '#F8B229',
       'lineColor': '#F8B229',
       'primaryBorderColor': '#27AE60',
       'secondaryColor': '#EBDEF0',
@@ -518,6 +548,7 @@ config:
 flowchart TD
     subgraph ITSPlugins["Issue Tracker (ITS) Integration Plugins"]
         P_ITSRoot["ITS Integration"]
+        style P_ITSRoot fill:#F719,stroke:#333,stroke-width:2px
 
         P_ITSRoot --> P_ITSBase["plugins/its-base<br/><i>Base for ITS plugins</i><br/>(Replaces plugins/hooks-its)"]
          click P_ITSBase href "https://gerrit.googlesource.com/plugins/its-base" "plugins/its-base"
@@ -562,7 +593,7 @@ config:
     'fontFamily': 'Monaco',
     'themeVariables': {
       'primaryColor': '#F5E3',
-      'primaryTextColor': '#145A32',
+      'primaryTextColor': '#F8B229',
       'lineColor': '#F8B229',
       'primaryBorderColor': '#27AE60',
       'secondaryColor': '#EBDEF0',
@@ -576,6 +607,7 @@ flowchart TD
     subgraph UIUXPlugins["UI & UX Enhancement Plugins"]
     direction LR
         P_UIUXRoot["UI/UX Plugins"]
+        style P_UIUXRoot fill:#F719,stroke:#333,stroke-width:2px
 
         P_UIUXRoot --> Avatars["Avatars"]
             Avatars --> P_AvatarsExt["plugins/avatars-external<br/><i>Custom URL for avatars</i><br/>(Replaces plugins/avatars/external)"]
@@ -658,7 +690,7 @@ config:
     'fontFamily': 'Monaco',
     'themeVariables': {
       'primaryColor': '#F5E3',
-      'primaryTextColor': '#145A32',
+      'primaryTextColor': '#F8B229',
       'lineColor': '#F8B229',
       'primaryBorderColor': '#27AE60',
       'secondaryColor': '#EBDEF0',
@@ -672,6 +704,8 @@ flowchart TD
     subgraph AdminPlugins["Administration &<br/> Management Plugins"]
     direction LR
         P_AdminRoot["Admin &<br/> Management"]
+        style P_AdminRoot fill:#F719,stroke:#333,stroke-width:2px
+        
 
         P_AdminRoot --> ProjectMgmt["Project Management"]
             ProjectMgmt --> P_DelProj["plugins/delete-project<br/><i>Delete projects via SSH</i>"]
@@ -771,7 +805,7 @@ config:
     'fontFamily': 'Monaco',
     'themeVariables': {
       'primaryColor': '#F5E3',
-      'primaryTextColor': '#145A32',
+      'primaryTextColor': '#F8B229',
       'lineColor': '#F8B229',
       'primaryBorderColor': '#27AE60',
       'secondaryColor': '#EBDEF0',
@@ -829,7 +863,7 @@ flowchart TD
         DepRoot --> P_WipDep["plugins/wip<br/>(DEPRECATED <br/>- Core feature since 2.15)"]
          click P_WipDep href "https://gerrit.googlesource.com/plugins/wip" "plugins/wip"
     end
-    style DepRoot fill:#ffcccb,stroke:#333,stroke-width:2px
+    style DepRoot fill:#F719,stroke:#333,stroke-width:2px
 ```
 
 ----
@@ -859,7 +893,7 @@ config:
     'fontFamily': 'Monaco',
     'themeVariables': {
       'primaryColor': '#F5E3',
-      'primaryTextColor': '#145A32',
+      'primaryTextColor': '#F8B229',
       'lineColor': '#F8B229',
       'primaryBorderColor': '#27AE60',
       'secondaryColor': '#EBDEF0',
@@ -873,6 +907,7 @@ flowchart TD
     subgraph DepInfraBuild["Deployment, Infrastructure &<br/> Build Tools"]
     direction LR
         DepInfra["Deployment &<br/> Infrastructure"]
+        style DepInfra fill:#F719,stroke:#333,stroke-width:2px
             DepInfra --> DI_AWS["aws-gerrit<br/><i>AWS setup scripts</i>"]
              click DI_AWS href "https://gerrit.googlesource.com/aws-gerrit" "aws-gerrit"
             DepInfra --> DI_Docker["docker-gerrit<br/><i>Official Docker image</i>"]
@@ -883,6 +918,7 @@ flowchart TD
              click DI_K8s href "https://gerrit.googlesource.com/k8s-gerrit" "k8s-gerrit"
 
         BuildTools["Build Systems &<br/> Tools"]
+        style BuildTools fill:#F719,stroke:#333,stroke-width:2px
             BuildTools --> BT_Bazlets["bazlets<br/><i>Bazel building blocks</i>"]
              click BT_Bazlets href "https://gerrit.googlesource.com/bazlets" "bazlets"
             BuildTools --> BT_Buck["buck<br/><i>Buck build tool (project)</i>"]
@@ -923,7 +959,7 @@ config:
     'fontFamily': 'Monaco',
     'themeVariables': {
       'primaryColor': '#F5E3',
-      'primaryTextColor': '#145A32',
+      'primaryTextColor': '#F8B229',
       'lineColor': '#F8B229',
       'primaryBorderColor': '#27AE60',
       'secondaryColor': '#EBDEF0',
@@ -937,6 +973,7 @@ flowchart TD
     subgraph OtherProjects["Tooling, CI/CD, Community &<br/> Other"]
     direction LR
         ToolingLib["Core Tooling &<br/> Libraries"]
+        style ToolingLib fill:#F719,stroke:#333,stroke-width:2px
             ToolingLib --> TL_ExecWar["executablewar<br/><i>Run code from WARs</i>"]
              click TL_ExecWar href "https://gerrit.googlesource.com/executablewar" "executablewar"
             ToolingLib --> TL_GCE["gcompute-tools<br/><i>Google Compute Engine tools</i>"]
@@ -971,6 +1008,7 @@ flowchart TD
              click TL_GwtExpUI href "https://gerrit.googlesource.com/gwtexpui" "gwtexpui"
 
         CICDInfra["CI/CD Infrastructure<br/>(Non-Plugin)"]
+        style CICDInfra fill:#F719,stroke:#333,stroke-width:2px
         direction LR
             CICDInfra --> CI_Scripts["gerrit-ci-scripts<br/><i>Gerrit CI build scripts</i>"]
              click CI_Scripts href "https://gerrit.googlesource.com/gerrit-ci-scripts" "gerrit-ci-scripts"
@@ -986,6 +1024,7 @@ flowchart TD
              click CI_ZuulOps href "https://gerrit.googlesource.com/zuul/ops" "zuul/ops"
 
         DocsCommunity["Documentation &<br/> Community"]
+        style DocsCommunity fill:#F719,stroke:#333,stroke-width:2px
         direction LR
             DocsCommunity --> DC_Homepage["homepage<br/><i>Gerrit homepage source</i>"]
              click DC_Homepage href "https://gerrit.googlesource.com/homepage" "homepage"
@@ -1020,6 +1059,7 @@ flowchart TD
 
 
         TestInternal["Test &<br/> Internal Repos"]
+        style TestInternal fill:#F719,stroke:#333,stroke-width:2px
         direction LR
             TestInternal --> TI_Brohlfs["brohlfs-test"]
              click TI_Brohlfs href "https://gerrit.googlesource.com/brohlfs-test" "brohlfs-test"
